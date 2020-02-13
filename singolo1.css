@@ -263,20 +263,97 @@ a.header-nav-link:hover {
 }
 
 .services {
-  display: grid;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 90px;
   height: 495px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
 }
 
-.services-header-title {
-  display: inline;
-  background-color: #f2f2f2;
+.services-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "header header header"
+    "item1 item2 item3"
+    "item4 item5 item6";
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  align-items: start;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  column-gap: 10px;
+  background-color: inherit;
 }
 
-.services-header-text {
-  background-color: #f2f2f2;
+.services-header {
+  grid-area: header;
+  background-color: inherit;
+  padding-bottom: 15px;
+}
+
+.services-header > h4 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  line-height: 18px;
+  color: #666d89;
+  background-color: inherit;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  text-align: left;
+}
+
+.services-header > p {
+  margin: 0;
+  background-color: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  word-spacing: 0.062em;
+  color: #767e9e;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  text-align: left;
+}
+
+.services-grid-item {
+  display: inline-grid;
+  grid-template-columns: 60px 220px;
+  grid-template-areas: "icon title"
+    "icon paragraph";
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  background-color: inherit;
+}
+
+.services-grid-item-icon {
+  margin: 0;
+  width: 34px;
+  height: 34px;
+  grid-area: icon;
+  padding: 10px;
+  background-color: inherit;
+  border: 2px solid #7a8098;
+  border-radius: 50%;
+}
+
+.services-grid-item-title {
+  grid-area: title;
+  margin: 0;
+  background-color: inherit;
+  font-size: 18px;
+  line-height: 18px;
+  color: #666d89;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  text-align: left;
+}
+
+.services-grid-item > p {
+  background-color: inherit;
+  margin: 0;
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  word-spacing: 0.1em;
+  text-align: left;
 }
