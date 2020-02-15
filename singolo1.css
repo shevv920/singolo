@@ -40,7 +40,7 @@ body {
   max-width: 1020px;
 }
 
-header {
+.header {
   position: relative;
   height: 89px;
   width: 100%;
