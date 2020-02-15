@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato-Light";
   font-style: normal;
   font-weight: 300;
   src: local("Lato-Light"),
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato-Regular";
   font-style: normal;
   font-weight: 400;
   src: local("Lato-Regular"),
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato-Bold";
   font-style: normal;
   font-weight: 700;
   src: local("Lato-Bold"),
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato-Black";
   font-style: normal;
   font-weight: 900;
   src: local("Lato-Black"),
@@ -31,7 +31,7 @@
 }
 
 * {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato-Regular", sans-serif;
   background-color: black;
 }
 
@@ -79,7 +79,7 @@ li:last-child::after {
   margin: 0;
   font-size: 24px;
   line-height: 6px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato-Bold", sans-serif;
   color: #ffffff;
   font-weight: 700;
   text-align: left;
@@ -90,7 +90,7 @@ li:last-child::after {
 
 .header-logo-extra {
   display: inline;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato-Bold", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 6px;
@@ -111,7 +111,7 @@ li:last-child::after {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 7px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato-Bold", sans-serif;
   font-weight: 700;
   text-align: left;
   color: #ffffff;
@@ -280,7 +280,8 @@ a.header-nav-link:hover {
 .services-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "header header header"
+  grid-template-areas:
+    "header header header"
     "item1 item2 item3"
     "item4 item5 item6";
   grid-column-gap: 20px;
@@ -301,7 +302,7 @@ a.header-nav-link:hover {
 .services-header > h4 {
   margin-bottom: 25px;
   font-size: 30px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato-Black", sans-serif;
   font-weight: 900;
   text-align: left;
   line-height: 18px;
@@ -316,9 +317,9 @@ a.header-nav-link:hover {
   line-height: 30px;
   word-spacing: 0.062em;
   color: #767e9e;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato-Light", sans-serif;
   font-weight: 300;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
   text-overflow: clip;
 }
@@ -327,7 +328,8 @@ a.header-nav-link:hover {
   display: inline-grid;
   padding: 0;
   grid-template-columns: 60px 219px;
-  grid-template-areas: "icon title"
+  grid-template-areas:
+    "icon title"
     "icon paragraph";
   grid-column-gap: 20px;
   grid-row-gap: 10px;
@@ -356,7 +358,7 @@ a.header-nav-link:hover {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato-Black", sans-serif;
   font-weight: 900;
   text-align: left;
   color: #666d89;
@@ -368,10 +370,9 @@ a.header-nav-link:hover {
   padding: 0;
   font-size: 12px;
   line-height: 22px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato-Regular", sans-serif;
   font-weight: 400;
-  letter-spacing: 0.01em;
-  word-spacing: 0.01em;
+  word-spacing: 0.1em;
   text-align: justify;
   color: #767e9e;
   background-color: inherit;
