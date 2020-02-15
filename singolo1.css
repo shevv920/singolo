@@ -163,7 +163,7 @@ a.header-nav-link:hover {
   transform: rotate(90deg);
 }
 
-.iphone-shadow-v {
+.iphone-shadow-vertical {
   position: absolute;
   left: 112px;
   top: 53px;
@@ -173,7 +173,7 @@ a.header-nav-link:hover {
   background-color: transparent;
 }
 
-.iphone-shadow-h {
+.iphone-shadow-horizontal {
   position: absolute;
   left: 112px;
   top: 26px;
@@ -372,7 +372,7 @@ a.header-nav-link:hover {
   line-height: 22px;
   font-family: "Lato-Regular", sans-serif;
   font-weight: 400;
-  word-spacing: 0.1em;
+  word-spacing: 10%;
   text-align: justify;
   color: #767e9e;
   background-color: inherit;
