@@ -118,7 +118,7 @@ li:last-child::after {
   background-color: #2d303a;
 }
 
-a.header-nav-link:hover {
+.header-nav-link:hover {
   color: #f06c64;
 }
 
