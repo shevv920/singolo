@@ -48,13 +48,13 @@ body {
   border-bottom: 6px solid #323746;
 }
 
-ul {
+.header-nav-list {
   margin: 0;
   padding: 0;
   background-color: #2d303a;
 }
 
-li {
+.header-nav-list-item {
   display: inline;
   background-color: #2d303a;
 }
@@ -207,13 +207,13 @@ a.header-nav-link:hover {
 
 .iphone-screen-content-vertical {
   position: absolute;
-  left: 128px;
-  top: 117px;
+  left: 113px;
+  top: -18px;
   z-index: 1150;
   background-color: transparent;
   stroke-opacity: 0;
   stroke: none;
-  clip-path: inset(0 395px 245px 0);
+  clip-path: inset(135px 380px 110px 15px);
 }
 
 .iphone-screen-content-horizontal {
