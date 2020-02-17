@@ -297,7 +297,7 @@ li:last-child::after {
   background-color: inherit;
 }
 
-.services-header > h4 {
+.services-header-title {
   margin-bottom: 25px;
   font-size: 30px;
   font-family: "Lato-Black", sans-serif;
@@ -308,21 +308,21 @@ li:last-child::after {
   background-color: inherit;
 }
 
-.services-header > p {
+.services-header-description {
   margin: 0;
-  background-color: inherit;
   font-size: 18px;
   line-height: 30px;
   word-spacing: 0.062em;
-  color: #767e9e;
   font-family: "Lato-Light", sans-serif;
   font-weight: 300;
   text-align: left;
   text-justify: inter-word;
   text-overflow: clip;
+  color: #767e9e;
+  background-color: inherit;
 }
 
-.services-grid-item {
+.services-item {
   display: inline-grid;
   padding: 0;
   grid-template-columns: 60px 219px;
@@ -335,7 +335,7 @@ li:last-child::after {
   background-color: inherit;
 }
 
-.services-grid-item-icon {
+.services-item-icon {
   grid-area: icon;
   margin-top: 13px;
   margin-left: 13px;
@@ -343,7 +343,7 @@ li:last-child::after {
   background-color: transparent;
 }
 
-.services-grid-item-icon-ellipse {
+.services-item-icon-ellipse {
   grid-area: icon;
   margin: auto;
   margin-top: 0;
@@ -351,7 +351,7 @@ li:last-child::after {
   background-color: transparent;
 }
 
-.services-grid-item-title {
+.services-item-title {
   grid-area: title;
   margin: 0;
   font-size: 18px;
@@ -363,14 +363,13 @@ li:last-child::after {
   background-color: inherit;
 }
 
-.services-grid-item > p {
+.services-item-description {
   margin: 0;
   padding: 0;
   font-size: 12px;
   line-height: 22px;
   font-family: "Lato-Regular", sans-serif;
   font-weight: 400;
-  word-spacing: 10%;
   text-align: justify;
   color: #767e9e;
   background-color: inherit;
