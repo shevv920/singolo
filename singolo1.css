@@ -30,9 +30,9 @@
     url("./assets/lato-v16-latin-900.woff2") format("woff2");
 }
 
-* {
+html {
   font-family: "Lato-Regular", sans-serif;
-  background-color: black;
+  background-color: white;
 }
 
 body {
@@ -318,7 +318,7 @@ li:last-child::after {
   text-align: left;
   text-justify: inter-word;
   text-overflow: clip;
-  color: #767e9e;
+  color: #666d89;
   background-color: inherit;
 }
 
@@ -371,6 +371,6 @@ li:last-child::after {
   font-family: "Lato-Regular", sans-serif;
   font-weight: 400;
   text-align: justify;
-  color: #767e9e;
+  color: #666d89;
   background-color: inherit;
 }
