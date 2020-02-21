@@ -238,19 +238,6 @@ li:last-child::after {
   color: #666d89;
 }
 
-.layout-3-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "header header header"
-    "item1 item2 item3"
-    "item4 item5 item6";
-  grid-column-gap: 20px;
-  grid-row-gap: 30px;
-  align-items: start;
-  padding: 0;
-}
-
 .main-article-text {
   margin: 0;
   font-size: 18px;
@@ -261,6 +248,14 @@ li:last-child::after {
   text-align: left;
   text-overflow: clip;
   color: #666d89;
+}
+
+.layout-3-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px 20px;
+  align-items: start;
+  padding: 0;
 }
 
 .services-item {
