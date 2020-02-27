@@ -44,17 +44,22 @@
   line-height: 22px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
+  letter-spacing: 0.1px;
   text-transform: capitalize;
   color: #767e9e;
 }
 
 .portfolio-nav-list-item {
   display: inline;
-  margin-right: 8px;
+}
+
+.portfolio-nav-list-item:nth-child(n + 2) {
+  margin-left: 8px;
 }
 
 .portfolio-nav-button {
-  padding: 2px 6px 3px 6px;
+  padding: 2px 6px 4px 6px;
+  letter-spacing: 0;
   text-align: center;
   border: 0.5px solid #767e9e;
   border-radius: 4px;
