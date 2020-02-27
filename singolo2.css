@@ -9,15 +9,16 @@
   box-sizing: border-box;
   width: 1020px;
   margin: auto;
-  padding: 68px 40px 70px 40px;
+  padding: 64px 40px 70px 40px;
 }
 
 .wrapper-title {
   font-size: 30px;
-  line-height: 24px;
+  line-height: 26px;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   text-align: left;
+  letter-spacing: -0.1px;
   color: #666d89;
 }
 
@@ -153,7 +154,7 @@
 
 .about_us-grid {
   display: grid;
-  padding-top: 43px;
+  padding-top: 45px;
   grid-template-columns: minmax(300px, 300px) minmax(300px, 300px) minmax(300px, 300px);
   gap: 20px 20px;
 }
@@ -164,11 +165,6 @@
   overflow: hidden;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 18px;
-  line-height: 18px;
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  text-align: left;
   color: #666d89;
 }
 
@@ -178,23 +174,30 @@
   overflow: hidden;
 }
 
+.person-name {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  text-align: left;
+  letter-spacing: -0.1px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .person-description {
   font-size: 12px;
-  line-height: 22px;
+  line-height: 20px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: justify;
   color: #767e9e;
 }
 
-.person-name {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .social_buttons {
-  width: 155px;
+  width: 154px;
+  padding-top: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
