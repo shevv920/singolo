@@ -58,9 +58,12 @@
 }
 
 .portfolio-nav-button {
+  margin: 0;
   padding: 2px 6px 4px 6px;
   letter-spacing: 0;
   text-align: center;
+  color: #767e9e;
+  background-color: transparent;
   border: 0.5px solid #767e9e;
   border-radius: 4px;
 }
@@ -68,7 +71,7 @@
 .portfolio-nav-button:hover {
   color: #ffffff;
   cursor: pointer;
-  border: 1px solid #ffffff;
+  border: 0.5px solid #ffffff;
 }
 
 .portfolio-illustration {
@@ -84,73 +87,61 @@
 }
 
 .portfolio-illustration-item1 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project1.png");
   background-position: -8px -11px;
 }
 
 .portfolio-illustration-item2 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project2.png");
   background-position: -82px -43px;
 }
 
 .portfolio-illustration-item3 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project3.png");
   background-position: -11px -1px;
 }
 
 .portfolio-illustration-item4 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project4.png");
   background-position: -24px -2px;
 }
 
 .portfolio-illustration-item5 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project5.png");
   background-position: -10px -16px;
 }
 
 .portfolio-illustration-item6 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project6.png");
   background-position: -16px -4px;
 }
 
 .portfolio-illustration-item7 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project7.png");
   background-position: -31px -39px;
 }
 
 .portfolio-illustration-item8 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project8.png");
   background-position: -24px -32px;
 }
 
 .portfolio-illustration-item9 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project9.png");
   background-position: -16px -2px;
 }
 
 .portfolio-illustration-item10 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project10.png");
   background-position: -141px -113px;
 }
 
 .portfolio-illustration-item11 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project11.png");
   background-position: -144px -175px;
 }
 
 .portfolio-illustration-item12 {
-  overflow: hidden;
   background-image: url("assets/portfolio/project12.png");
   background-position: -36px -60px;
 }
