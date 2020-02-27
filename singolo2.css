@@ -183,11 +183,13 @@
   line-height: 22px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  text-align: left;
+  text-align: justify;
   color: #767e9e;
 }
 
 .person-name {
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -210,9 +212,10 @@
   width: 15px;
   height: 15px;
   margin: 7px;
+  fill: #666d89;
 }
 
 .social_icon:hover {
-  fill: #666d89;
+  fill: #000000;
   cursor: pointer;
 }
