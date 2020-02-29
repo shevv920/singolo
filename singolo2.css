@@ -8,11 +8,14 @@
 .wrapper {
   box-sizing: border-box;
   width: 1020px;
-  margin: auto;
-  padding: 64px 40px 70px 40px;
+  margin: 0 auto;
 }
 
-.wrapper-title {
+section {
+  padding: 64px 40px 68px 40px;
+}
+
+.section-title {
   font-size: 30px;
   line-height: 26px;
   font-family: "Lato", sans-serif;
@@ -22,7 +25,7 @@
   color: #666d89;
 }
 
-.wrapper-description {
+.section-description {
   padding-top: 23px;
   font-size: 18px;
   line-height: 30px;
