@@ -41,28 +41,12 @@
 
 .portfolio-nav {
   padding-top: 10px;
-}
-
-.portfolio-nav-list-item {
-  display: inline;
-  padding: 0 4px 3px 5px;
   color: #767e9e;
-  border: 0.5px solid #767e9e;
-  border-radius: 4px;
-}
-
-.portfolio-nav-list-item:hover {
-  color: #ffffff;
-  cursor: pointer;
-  border: 0.5px solid #ffffff;
-}
-
-.portfolio-nav-list-item:nth-child(n + 2) {
-  margin-left: 8px;
 }
 
 .portfolio-nav-button {
-  margin: 0;
+  margin: 0 5px 0 0;
+  padding: 2px 8px 4px 6px;
   font-size: 12px;
   line-height: 21.5px;
   font-family: "Lato", sans-serif;
@@ -70,6 +54,14 @@
   text-align: center;
   text-transform: capitalize;
   background-color: transparent;
+  border: 0.5px solid #767e9e;
+  border-radius: 4px;
+}
+
+.portfolio-nav-button:hover {
+  color: #ffffff;
+  cursor: pointer;
+  border: 0.5px solid #ffffff;
 }
 
 .portfolio-illustration {
