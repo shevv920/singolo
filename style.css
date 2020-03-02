@@ -1,0 +1,74 @@
+@import "fonts.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px 24px 40px;
+  letter-spacing: -0.1px;
+  line-height: 30px;
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+}
+
+.header-logo {
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.header-logo-extra {
+  color: #f06c64;
+}
+
+.header-nav {
+  padding-top: 4px;
+  background-color: #2d303a;
+}
+
+.header-nav-list {
+  margin: 0;
+}
+
+.header-nav-list-item {
+  display: inline;
+}
+
+.header-nav-list-item::after {
+  margin-left: 8px;
+  margin-right: 8px;
+  color: #494e62;
+  content: "·";
+}
+
+.header-nav-list-item:last-child::after {
+  margin: 0;
+  content: "";
+}
+
+.header-nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-align: left;
+  color: #ffffff;
+}
+
+.header-nav-link:hover {
+  color: #f06c64;
+}
