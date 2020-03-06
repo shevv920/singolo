@@ -442,8 +442,8 @@
   border-radius: 5px;
 }
 
-.get_a_quote-form-input::placeholder,
-.get_a_quote-form-textarea::placeholder {
+.get_a_quote-form-input::-webkit-input-placeholder,
+.get_a_quote-form-textarea::-webkit-input-placeholder {
   font-size: 12px;
   line-height: 22px;
   font-family: "Lato", sans-serif;
