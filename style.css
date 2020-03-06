@@ -230,7 +230,7 @@
 }
 
 .portfolio {
-  padding: 64px 40px 68px 40px;
+  padding: 64px 40px 67px 40px;
   color: #666d89;
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
@@ -334,7 +334,7 @@
 }
 
 .about_us {
-  padding: 64px 40px 67px 40px;
+  padding: 64px 40px 66px 40px;
   color: #666d89;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
@@ -370,7 +370,7 @@
 .person-description {
   margin-top: 10px;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 21px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: justify;
@@ -406,7 +406,7 @@
 }
 
 .get_a_quote {
-  padding: 64px 40px 11px 40px;
+  padding: 64px 40px 14px 40px;
   color: #f0d8d9;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
