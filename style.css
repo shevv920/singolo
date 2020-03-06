@@ -458,6 +458,7 @@
 }
 
 .get_a_quote-submit_button {
+  justify-self: right;
   width: fit-content;
   padding: 8px;
   font-size: 16px;
@@ -505,7 +506,7 @@
 }
 
 .contact_info-location {
-  display: block;
+  display: inline;
   font-size: 12px;
   line-height: 22px;
   font-family: "Lato", sans-serif;
@@ -516,7 +517,7 @@
 }
 
 .contact_info-phone {
-  display: block;
+  display: inline;
   font-size: 12px;
   line-height: 22px;
   font-family: "Lato", sans-serif;
@@ -527,7 +528,7 @@
 }
 
 .contact_info-email {
-  display: block;
+  display: inline;
   font-size: 12px;
   line-height: 22px;
   font-family: "Lato", sans-serif;
