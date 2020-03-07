@@ -442,6 +442,11 @@
   border-radius: 5px;
 }
 
+.get_a_quote-form-input:required:invalid {
+  padding: 7px 1px 7px 13px;
+  border: 1px solid #f7a500;
+}
+
 .get_a_quote-form-input::-webkit-input-placeholder,
 .get_a_quote-form-textarea::-webkit-input-placeholder {
   font-size: 12px;
