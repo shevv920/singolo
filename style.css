@@ -454,6 +454,10 @@
   color: #f48c8f;
 }
 
+.get_a_quote-form-input:focus:invalid {
+  outline: 2px solid #ff0000;
+}
+
 .get_a_quote-form-textarea {
   height: 202px;
   resize: none;
