@@ -469,6 +469,11 @@
   color: #f48c8f;
   background-color: #d6564f;
   border: none;
+  border-radius: 5px;
+}
+
+.get_a_quote-submit_button:hover {
+  cursor: pointer;
 }
 
 .contact_info {
