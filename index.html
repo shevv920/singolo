@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <title>Singolo</title>
 </head>
 <body>
@@ -15,25 +16,23 @@
       <nav class="header-nav">
         <ul class="header-nav-list">
           <li class="header-nav-list-item">
-            <a class="header-nav-link" href="#">Home</a>
+            <a id="header_link_home" class="header-nav-link active" href="#header_link_home">Home</a>
           </li>
           <li class="header-nav-list-item">
-            <a class="header-nav-link" href="#">Services</a>
+            <a id="header_link_services" class="header-nav-link" href="#services">Services</a>
           </li>
           <li class="header-nav-list-item">
-            <a class="header-nav-link" href="#">Portfolio</a>
+            <a id="header_link_portfolio" class="header-nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li class="header-nav-list-item">
-            <a class="header-nav-link" href="#">About</a>
+            <a id="header_link_about" class="header-nav-link" href="#about">About</a>
           </li>
           <li class="header-nav-list-item">
-            <a class="header-nav-link" href="#">Contact</a>
+            <a id="header_link_contact" class="header-nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
-  </div>
-  <div class="wrapper">
     <section class="slider">
       <img class="arrow-left" src="assets/arrow_left.png" alt="slider left arrow">
       <div class="slider-screen">
@@ -50,9 +49,7 @@
       </div>
       <img class="arrow-right" src="assets/arrow_Right.png" alt="slider right arrow">
     </section>
-  </div>
-  <div class="wrapper">
-    <section class="services">
+    <section class="services" id="services">
       <div class="section-title">Our Services</div>
       <p class="section-description">
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -104,37 +101,33 @@
         </div>
       </div>
     </section>
-  </div>
-  <div class="wrapper">
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="section-title">Portfolio</div>
       <div class="section-description">
         Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
       </div>
       <nav class="portfolio-nav">
-        <span class="portfolio-nav-button" type="button">All</span>
-        <span class="portfolio-nav-button" type="button">Web design</span>
-        <span class="portfolio-nav-button" type="button">Graphic Design</span>
-        <span class="portfolio-nav-button" type="button">Artwork</span>
+        <span class="portfolio-nav-button" id="portfolio-nav-button-all" type="button">All</span>
+        <span class="portfolio-nav-button" id="portfolio-nav-button-web_design" type="button">Web design</span>
+        <span class="portfolio-nav-button" id="portfolio-nav-button-graphic_design" type="button">Graphic Design</span>
+        <span class="portfolio-nav-button" id="portfolio-nav-button-artwork" type="button">Artwork</span>
       </nav>
       <div class="portfolio-illustration">
-        <div class="portfolio-illustration-item1"></div>
-        <div class="portfolio-illustration-item2"></div>
-        <div class="portfolio-illustration-item3"></div>
-        <div class="portfolio-illustration-item4"></div>
-        <div class="portfolio-illustration-item5"></div>
-        <div class="portfolio-illustration-item6"></div>
-        <div class="portfolio-illustration-item7"></div>
-        <div class="portfolio-illustration-item8"></div>
-        <div class="portfolio-illustration-item9"></div>
-        <div class="portfolio-illustration-item10"></div>
-        <div class="portfolio-illustration-item11"></div>
-        <div class="portfolio-illustration-item12"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item1"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item2"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item3"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item4"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item5"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item6"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item7"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item8"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item9"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item10"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item11"></div>
+        <div class="portfolio-illustration-item" id="portfolio-item12"></div>
       </div>
     </section>
-  </div>
-  <div class="wrapper">
-    <section class="about_us">
+    <section class="about_us" id="about">
       <div class="section-title">
         About Us
       </div>
@@ -203,9 +196,7 @@
         </div>
       </div>
     </section>
-  </div>
-  <div class="wrapper">
-    <section class="get_a_quote">
+    <section class="get_a_quote" id="contact">
       <div class="section-title">Get a Quote</div>
       <div class="section-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
       <div class="get_a_quote-container">
@@ -242,8 +233,6 @@
         </div>
       </div>
     </section>
-  </div>
-  <div class="wrapper">
     <footer class="footer">
       <div class="footer-copyright">&copy; Copyright 2013</div>
       <div class="social_buttons-footer">
