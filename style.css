@@ -107,6 +107,28 @@
 .slider-screen {
   position: relative;
   min-height: 540px;
+  overflow: hidden;
+}
+
+#slide-1 {
+  position: relative;
+  left: 0;
+}
+
+#slide-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left: -880px;
+  top: 6px;
+}
+
+#slide-2-img {
+  margin: 0 auto;
+}
+
+.slide-transitioned {
+  transition: ease-in-out 1s;
 }
 
 .arrow-left {
@@ -259,6 +281,7 @@
   border-radius: 4px;
 }
 
+.portfolio-nav-button-active,
 .portfolio-nav-button:hover {
   color: #ffffff;
   cursor: pointer;
@@ -488,6 +511,25 @@
 
 .get_a_quote-submit_button:hover {
   cursor: pointer;
+}
+
+#form_submit_res-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: transparent;
+}
+
+#form_submit_res-content {
+  margin: 35% auto;
+  padding: 20px;
+  width: 620px;
+  background-color: #d6564f;
+  border: 1px solid #000000;
 }
 
 .contact_info {

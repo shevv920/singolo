@@ -36,18 +36,21 @@
     <section class="slider">
       <img class="arrow-left" src="assets/arrow_left.png" alt="slider left arrow">
       <div class="slider-screen">
-        <div class="iphone-vertical">
-          <img class="iphone-shadow-vertical" src="assets/iphone/Shadow.png" alt="iphone shadow">
-          <img class="iphone-base" src="assets/iphone/Base.png" alt="iphone base">
+        <div id="slide-1">
+          <div class="iphone-vertical">
+            <img class="iphone-shadow-vertical" src="assets/iphone/Shadow.png" alt="iphone shadow">
+            <img class="iphone-base" src="assets/iphone/Base.png" alt="iphone base">
+          </div>
+          <img class="iphone-screen-content-vertical" src="assets/iphone/content_vertical.png" alt="iphone screen content">
+          <div class="iphone-horizontal">
+            <img class="iphone-shadow-horizontal" src="assets/iphone/Shadow.png" alt="iphone shadow">
+            <img class="iphone-base" src="assets/iphone/Base.png" alt="iphone base">
+          </div>
+          <img class="iphone-screen-content-horizontal" src="assets/iphone/content_horizontal.png" alt="iphone-horizontal content">
         </div>
-        <img class="iphone-screen-content-vertical" src="assets/iphone/content_vertical.png" alt="iphone screen content">
-        <div class="iphone-horizontal">
-          <img class="iphone-shadow-horizontal" src="assets/iphone/Shadow.png" alt="iphone shadow">
-          <img class="iphone-base" src="assets/iphone/Base.png" alt="iphone base">
-        </div>
-        <img class="iphone-screen-content-horizontal" src="assets/iphone/content_horizontal.png" alt="iphone-horizontal content">
+        <div id="slide-2"><img src="assets/slider/slide-2.png" alt="slide-2"></div>
       </div>
-      <img class="arrow-right" src="assets/arrow_Right.png" alt="slider right arrow">
+      <img class="arrow-right" src="assets/arrow_right.png" alt="slider right arrow">
     </section>
     <section class="services" id="services">
       <div class="section-title">Our Services</div>
@@ -200,11 +203,11 @@
       <div class="section-title">Get a Quote</div>
       <div class="section-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
       <div class="get_a_quote-container">
-        <form class="get_a_quote-form" action="#" method="POST">
-          <input class="get_a_quote-form-input" type="text" required placeholder="Name (Required)" pattern="[A-Za-z]+">
-          <input class="get_a_quote-form-input" type="email" required placeholder="Email (Required)">
-          <input class="get_a_quote-form-input" type="text" placeholder="Subject">
-          <textarea class="get_a_quote-form-textarea" placeholder="Describe your project in detail"></textarea>
+        <form class="get_a_quote-form" id="get_a_quote-form" action="#" method="POST">
+          <input class="get_a_quote-form-input" id="get_a_quote-form-name" type="text" required placeholder="Name (Required)" pattern="[A-Za-z]+">
+          <input class="get_a_quote-form-input" id="get_a_quote-form-email" type="email" required placeholder="Email (Required)">
+          <input class="get_a_quote-form-input" id="get_a_quote-form-subject" type="text" placeholder="Subject">
+          <textarea class="get_a_quote-form-textarea" id="get_a_quote-form-description" placeholder="Describe your project in detail"></textarea>
           <button class="get_a_quote-submit_button" type="submit">Submit</button>
         </form>
         <div class="contact_info">
@@ -230,6 +233,14 @@
             <span class="contact_info-link-description">info@singolo.com</span>
             </div>
           </div>
+        </div>
+      </div>
+      <div id="form_submit_res-container">
+        <div id="form_submit_res-content">
+          <div>Письмо отправлено</div>
+          <div id="form_submit-res-subject"></div>
+          <div id="form_submit-res-description"></div>
+          <button id="form_submit-confirm_btn">Ok</button>
         </div>
       </div>
     </section>
