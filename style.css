@@ -110,25 +110,22 @@
   overflow: hidden;
 }
 
-#slide-1 {
+.slide-1 {
   position: relative;
   left: 0;
+  background-color: #f06c64;
 }
 
-#slide-2 {
+.slide-2 {
   position: relative;
-  display: flex;
-  justify-content: center;
   left: -880px;
   top: 6px;
+  background-color: #648bf0;
 }
 
-#slide-2-img {
-  margin: 0 auto;
-}
-
-.slide-transitioned {
-  transition: ease-in-out 1s;
+.slide-2-img {
+  position: absolute;
+  left: 199px;
 }
 
 .arrow-left {
@@ -156,11 +153,9 @@
 
 .iphone-screen-content-vertical {
   position: absolute;
-  top: 85px;
-  left: 52px;
+  top: 66px;
+  left: 14px;
   z-index: 1100;
-  border: 2px solid #c6c6c6;
-  border-radius: 3px;
 }
 
 .iphone-horizontal {
@@ -179,10 +174,10 @@
 
 .iphone-screen-content-horizontal {
   position: absolute;
-  top: 155px;
-  right: 128px;
-  border: 2px solid #c6c6c6;
-  border-radius: 3px;
+  top: 138px;
+  right: -277px;
+  z-index: 1100;
+  transform: rotate(270deg);
 }
 
 .iphone-base {
@@ -520,8 +515,9 @@
   left: 0;
   top: 0;
   width: 100%;
+  height: 100%;
   overflow: auto;
-  background-color: transparent;
+  background-color: rgba(192, 191, 191, 0.9);
 }
 
 #form_submit_res-content {
@@ -529,7 +525,11 @@
   padding: 20px;
   width: 620px;
   background-color: #d6564f;
-  border: 1px solid #000000;
+  border: 1px solid #b1b1b1;
+}
+
+#form_submit-confirm_btn {
+  padding: 5px;
 }
 
 .contact_info {
