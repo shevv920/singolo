@@ -1,8 +1,8 @@
 window.addEventListener("load", () => {
   document.addEventListener("click", ev => mainHandler(ev));
   document.addEventListener("submit", ev => formSubmitHandler(ev));
-  document.querySelector(".iphone-vertical").onclick = () => toggleVertical();
-  document.querySelector(".iphone-horizontal").onclick = () => toggleHorizontal();;
+  document.querySelector(".iphone-vertical").onclick = () => toggleVertical(event);
+  document.querySelector(".iphone-horizontal").onclick = () => toggleHorizontal(event);
 
   const getElementLeftOffset = elem => Number(elem.style.left.replace(/[^\-\d]/g, ""));
   const getElementWidth      = elem => Number(window.getComputedStyle(elem).width.replace(/[^\d\-]/g, ""));
@@ -54,12 +54,14 @@ window.addEventListener("load", () => {
     }, 5);    
   }
   
-  function toggleVertical() {
+  function toggleVertical(event) {
+    if(event.target.classList[0] === "iphone-shadow-vertical") return;
     const screenContent = document.querySelector(".iphone-vertical > .iphone-screen-content-vertical");
     screenContent.style.display = screenContent.style.display === "none" ? "block" : "none";
   }
 
-  function toggleHorizontal() {
+  function toggleHorizontal(event) {
+    if(event.target.classList[0] === "iphone-shadow-horizontal") return;
     const screenContent = document.querySelector(".iphone-horizontal > .iphone-screen-content-horizontal");
     screenContent.style.display = screenContent.style.display === "none" ? "block" : "none";
   }
@@ -84,7 +86,7 @@ window.addEventListener("load", () => {
         break;
       case "arrow-right":
         moveSlider(10);
-        break;      
+        break;    
       default:      
         break;
     }
