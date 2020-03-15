@@ -101,8 +101,8 @@ window.addEventListener("load", () => {
     const resSubject = document.querySelector("#form_submit-res-subject");
     const resDescr   = document.querySelector("#form_submit-res-description");
 
-    resSubject.textContent = subject !== "" ? `Тема: ${subject}` : "Без темы";
-    resDescr.textContent   = descr !== "" ? `Описание: ${descr}` : "Без описания";
+    resSubject.textContent = subject !== "" ? `Subject: ${subject}` : "Without subject";
+    resDescr.textContent   = descr !== "" ? `Description: ${descr}` : "Without description";
 
     const windowContainer = document.querySelector("#form_submit_res-container");
     windowContainer.style.display = "block";
