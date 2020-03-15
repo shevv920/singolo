@@ -10,6 +10,8 @@ window.addEventListener("load", () => {
   const sliderScreen = document.querySelector(".slider-screen");
   const offset       = getElementWidth(sliderScreen);
   const slides       = document.querySelectorAll(".slider-screen > div");
+  const sliderSpeed  = 10;
+
   //init slides
   slides.forEach((s, i) => s.style.left = (i * offset) + "px");
   let timer = undefined;
@@ -82,10 +84,10 @@ window.addEventListener("load", () => {
         setUniqueInSiblings(event.target, "portfolio-image-outlined");
         break;
       case "arrow-left":
-        moveSlider(-10);
+        moveSlider(sliderSpeed * -1);
         break;
       case "arrow-right":
-        moveSlider(10);
+        moveSlider(sliderSpeed);
         break;    
       default:      
         break;
