@@ -24,14 +24,20 @@ window.addEventListener("load", () => {
     siblings.forEach(sib => sib.classList.remove(cls));
     return true; 
   }
-
-  function fromArray (arr, beginIndex, requiredLength) {
-    if(arr.length === 0) return arr;
+  
+  /**
+   * 
+   * @param {*} array source array
+   * @param {*} beginIndex index in source array to start from
+   * @param {*} requiredLength required result array length
+   */
+  function fromArray (array, beginIndex, requiredLength) {
+    if(array.length === 0) return array;
     else return loop([], requiredLength, beginIndex);
     function loop(acc, rem, curIndex) {
       if(rem == 0) return acc;
-      if(arr[curIndex] === undefined) return loop(acc, rem, 0);
-      else return loop([...acc, arr[curIndex]], rem - 1, curIndex + 1);      
+      if(array[curIndex] === undefined) return loop(acc, rem, 0);
+      else return loop([...acc, array[curIndex]], rem - 1, curIndex + 1);      
     }
   }
 
