@@ -25,14 +25,24 @@ window.addEventListener("load", () => {
     return true; 
   }
 
-  function portfolioShuffle() {
+  function fromArray (arr, beginIndex, requiredLength) {
+    if(arr.length === 0) return arr;
+    else return loop([], requiredLength, beginIndex);
+    function loop(acc, rem, curIndex) {
+      if(rem == 0) return acc;
+      if(arr[curIndex] === undefined) return loop(acc, rem, 0);
+      else return loop([...acc, arr[curIndex]], rem - 1, curIndex + 1);      
+    }
+  }
+
+  function portfolioShuffle(beginIndex = 0) {
     const illustrations = document.querySelector(".portfolio-illustration");
-    const images = [...illustrations.children];
-    const sorted = images.sort(() => 0.5 - Math.random());
+    const images        = [...illustrations.children];
+    const mixed         = fromArray(images, beginIndex, images.length);
     while(illustrations.firstChild) {
       illustrations.firstChild.remove();
     }
-    sorted.forEach(img => illustrations.appendChild(img));
+    illustrations.append(...mixed);
   }
 
   function moveSlider(rate) {
@@ -77,8 +87,10 @@ window.addEventListener("load", () => {
         scrollTarget.scrollIntoView({behavior: "smooth"});
         break;
       case "portfolio-nav-button":
-        if(setUniqueInSiblings(event.target, "portfolio-nav-button-active"))
-          portfolioShuffle();
+        if(setUniqueInSiblings(event.target, "portfolio-nav-button-active")) {
+          const index = [...event.target.parentElement.children].indexOf(event.target) + 1;
+          portfolioShuffle(index);
+        }
         break;
       case "portfolio-illustration-item":
         setUniqueInSiblings(event.target, "portfolio-image-outlined");
