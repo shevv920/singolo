@@ -6,6 +6,8 @@ window.addEventListener("load", () => {
 
   const getElementLeftOffset = elem => Number(elem.style.left.replace(/[^\-\d]/g, ""));
   const getElementWidth      = elem => Number(window.getComputedStyle(elem).width.replace(/[^\d\-]/g, ""));
+  const isContainsClass      = (elem, cls) => elem.classList.contains(cls);
+
   const slider       = document.querySelector(".slider");
   const sliderScreen = document.querySelector(".slider-screen");
   const offset       = getElementWidth(sliderScreen);
@@ -73,42 +75,36 @@ window.addEventListener("load", () => {
   }
   
   function toggleVertical(event) {
-    if(event.target.classList[0] === "iphone-shadow-vertical") return;
+    if(isContainsClass(event.target, "iphone-shadow-vertical")) return;
     const screenContent = document.querySelector(".iphone-vertical > .iphone-screen-content-vertical");
     screenContent.style.display = screenContent.style.display === "none" ? "block" : "none";
   }
 
   function toggleHorizontal(event) {
-    if(event.target.classList[0] === "iphone-shadow-horizontal") return;
+    if(isContainsClass(event.target, "iphone-shadow-horizontal")) return;
     const screenContent = document.querySelector(".iphone-horizontal > .iphone-screen-content-horizontal");
     screenContent.style.display = screenContent.style.display === "none" ? "block" : "none";
   }
 
   function mainHandler(event) {
-    switch(event.target.classList[0]) {
-      case "header-nav-link":
-        event.preventDefault();
-        setUniqueInSiblings(event.target, "active");        
-        const scrollTarget = document.querySelector(event.target.getAttribute("href"));
-        scrollTarget.scrollIntoView({behavior: "smooth"});
-        break;
-      case "portfolio-nav-button":
-        if(setUniqueInSiblings(event.target, "portfolio-nav-button-active")) {
-          const index = [...event.target.parentElement.children].indexOf(event.target) + 1;
-          portfolioShuffle(index);
-        }
-        break;
-      case "portfolio-illustration-item":
-        setUniqueInSiblings(event.target, "portfolio-image-outlined");
-        break;
-      case "arrow-left":
-        moveSlider(sliderSpeed * -1);
-        break;
-      case "arrow-right":
-        moveSlider(sliderSpeed);
-        break;    
-      default:      
-        break;
+    const target = event.target;
+
+    if(isContainsClass(target, "header-nav-link")) {
+      event.preventDefault();
+      setUniqueInSiblings(event.target, "active");        
+      const scrollTarget = document.querySelector(event.target.getAttribute("href"));
+      scrollTarget.scrollIntoView({behavior: "smooth"});
+    } else if(isContainsClass(target, "portfolio-nav-button")) {
+      if(setUniqueInSiblings(event.target, "portfolio-nav-button-active")) {
+        const index = [...event.target.parentElement.children].indexOf(event.target) + 1;
+        portfolioShuffle(index);
+      }
+    } else if (isContainsClass(target, "portfolio-illustration-item")) {
+      setUniqueInSiblings(event.target, "portfolio-image-outlined");
+    } else if (isContainsClass(target, "arrow-left")) {
+      moveSlider(sliderSpeed * -1);
+    } else if (isContainsClass(target, "arrow-right")) {
+      moveSlider(sliderSpeed);
     }
   }
 
