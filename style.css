@@ -39,6 +39,17 @@
   border-bottom: 6px solid #323746;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1500;
+  width: 1020px;
+}
+
+.sticky + .content {
+  padding-top: 95px;
+}
+
 .header-logo {
   font-size: 25px;
   font-family: "Lato", sans-serif;
@@ -530,6 +541,11 @@
 
 #form_submit-confirm_btn {
   padding: 5px;
+}
+
+#form_submit-res-description {
+  width: 100%;
+  text-align: justify;
 }
 
 .contact_info {

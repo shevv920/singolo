@@ -1,8 +1,9 @@
 window.addEventListener("load", () => {
   document.addEventListener("click", ev => mainHandler(ev));
   document.addEventListener("submit", ev => formSubmitHandler(ev));
-  document.querySelector(".iphone-vertical").onclick = () => toggleVertical(event);
-  document.querySelector(".iphone-horizontal").onclick = () => toggleHorizontal(event);
+  document.addEventListener("scroll", scrollHandler);
+  document.querySelector(".iphone-vertical").addEventListener('click', event => toggleVertical(event));
+  document.querySelector(".iphone-horizontal").addEventListener('click', event => toggleHorizontal(event));
 
   const getElementLeftOffset = elem => Number(elem.style.left.replace(/[^\-\d]/g, ""));
   const getElementWidth      = elem => Number(window.getComputedStyle(elem).width.replace(/[^\d\-]/g, ""));
@@ -13,6 +14,28 @@ window.addEventListener("load", () => {
   const offset       = getElementWidth(sliderScreen);
   const slides       = document.querySelectorAll(".slider-screen > div");
   const sliderSpeed  = 10;
+  const headerLinks  = [...document.querySelectorAll(".header-nav-link")];
+  //scroll via intersection observer api
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1.0
+  }
+  const observeCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        const elem     = entry.target;
+        const targetId = elem.getAttribute("id");
+        headerLinks
+          .filter(l => l.getAttribute("href").substring(1) === targetId)
+          .forEach(l => setUniqueInSiblings(l, "active"));
+      }
+    });
+  };
+  const observer = new IntersectionObserver(observeCallback, options); 
+  const children = document.querySelectorAll(".content > section");
+  children.forEach(c => observer.observe(c));
+  
 
   //init slides
   slides.forEach((s, i) => s.style.left = (i * offset) + "px");
@@ -91,7 +114,6 @@ window.addEventListener("load", () => {
 
     if(isContainsClass(target, "header-nav-link")) {
       event.preventDefault();
-      setUniqueInSiblings(event.target, "active");        
       const scrollTarget = document.querySelector(event.target.getAttribute("href"));
       scrollTarget.scrollIntoView({behavior: "smooth"});
     } else if(isContainsClass(target, "portfolio-nav-button")) {
@@ -111,8 +133,8 @@ window.addEventListener("load", () => {
   function formSubmitHandler(event) {
     event.preventDefault();
     const form    = document.querySelector("#get_a_quote-form");
-    const subject = document.querySelector("#get_a_quote-form-subject").value;
-    const descr   = document.querySelector("#get_a_quote-form-description").value;
+    const subject = document.querySelector("#get_a_quote-form-subject").value.toString();
+    const descr   = document.querySelector("#get_a_quote-form-description").value.toString();
 
     const resSubject = document.querySelector("#form_submit-res-subject");
     const resDescr   = document.querySelector("#form_submit-res-description");
@@ -127,5 +149,17 @@ window.addEventListener("load", () => {
       windowContainer.style.display = "none";
       form.reset();
     }    
+  }
+
+  function scrollHandler() {
+    const header      = document.querySelector(".header");
+    const headerOff   = header.offsetTop;
+    const pageYOffset = window.pageYOffset;
+
+    if(pageYOffset > headerOff) header.classList.add("sticky");
+    else {
+      // setUniqueInSiblings(document.querySelector('#header_link_home'), 'active');
+      header.classList.remove("sticky");
+    }
   }
 });
