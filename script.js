@@ -156,10 +156,9 @@ window.addEventListener("load", () => {
     const headerOff   = header.offsetTop;
     const pageYOffset = window.pageYOffset;
 
-    if(pageYOffset > headerOff) header.classList.add("sticky");
-    else {
-      // setUniqueInSiblings(document.querySelector('#header_link_home'), 'active');
-      header.classList.remove("sticky");
-    }
+    if(pageYOffset > headerOff) 
+      header.classList.add("sticky");
+    else 
+      header.classList.remove("sticky");    
   }
 });
