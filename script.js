@@ -36,7 +36,6 @@ window.addEventListener("load", () => {
   const children = document.querySelectorAll(".content > section");
   children.forEach(c => observer.observe(c));
   
-
   //init slides
   slides.forEach((s, i) => s.style.left = (i * offset) + "px");
   let timer = undefined;
