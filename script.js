@@ -32,9 +32,11 @@ window.addEventListener("load", () => {
       }
     });
   };
-  const observer = new IntersectionObserver(observeCallback, options); 
-  const children = document.querySelectorAll(".content > section");
-  children.forEach(c => observer.observe(c));
+  const observer  = new IntersectionObserver(observeCallback, options); 
+  const navPoints = document.querySelectorAll(".content > section");
+  const homeA     = document.querySelector("#home");
+  observer.observe(homeA);
+  navPoints.forEach(c => observer.observe(c));
   
   //init slides
   slides.forEach((s, i) => s.style.left = (i * offset) + "px");
