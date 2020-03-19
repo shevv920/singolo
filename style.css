@@ -546,6 +546,7 @@
 #form_submit-res-description {
   width: 100%;
   text-align: justify;
+  word-wrap: break-word;
 }
 
 .contact_info {
