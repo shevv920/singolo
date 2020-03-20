@@ -6,14 +6,18 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 .wrapper {
   width: 1020px;
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: 30px;
-  line-height: 26px;
+  font-size: 3rem;
+  line-height: 2.6rem;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   text-align: left;
@@ -22,8 +26,8 @@
 
 .section-description {
   margin-top: 23px;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.8rem;
+  line-height: 3rem;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   text-align: justify;
@@ -34,7 +38,7 @@
   justify-content: space-between;
   padding: 30px 40px 24px 40px;
   letter-spacing: -0.1px;
-  line-height: 30px;
+  line-height: 3rem;
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
 }
@@ -51,7 +55,7 @@
 }
 
 .header-logo {
-  font-size: 25px;
+  font-size: 2.5rem;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-align: left;
@@ -91,7 +95,7 @@
 .header-nav-link {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-align: left;
@@ -246,8 +250,8 @@
 .services-item-title {
   grid-area: title;
   margin: 0;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   text-align: left;
@@ -256,8 +260,8 @@
 
 .services-item-description {
   grid-area: description;
-  font-size: 12px;
-  line-height: 21px;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: justify;
@@ -279,8 +283,8 @@
 .portfolio-nav-button {
   margin: 0 5px 0 0;
   padding: 2px 8px 4px 6px;
-  font-size: 12px;
-  line-height: 21.5px;
+  font-size: 1.2rem;
+  line-height: 2.15rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -395,8 +399,8 @@
 
 .person-name {
   margin-top: 16px;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.8rem;
+  line-height: 2rem;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   text-align: left;
@@ -409,8 +413,8 @@
 
 .person-description {
   margin-top: 10px;
-  font-size: 12px;
-  line-height: 21px;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: justify;
@@ -486,8 +490,8 @@
 .get_a_quote-form-textarea::placeholder,
 .get_a_quote-form-input::-webkit-input-placeholder,
 .get_a_quote-form-textarea::-webkit-input-placeholder {
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: left;
@@ -507,8 +511,8 @@
   justify-self: right;
   width: fit-content;
   padding: 8px;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-align: left;
@@ -557,8 +561,8 @@
 }
 
 .contact_info-title {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.8rem;
+  line-height: 2rem;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   text-align: left;
@@ -567,8 +571,8 @@
 
 .contact_info-description {
   margin-top: 9px;
-  font-size: 12px;
-  line-height: 21px;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: justify;
@@ -578,8 +582,8 @@
 
 .contact_info-links {
   margin-top: 22px;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: left;
@@ -588,8 +592,8 @@
 
 .contact_info-location {
   display: inline;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: left;
@@ -599,8 +603,8 @@
 
 .contact_info-phone {
   display: inline;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: left;
@@ -610,8 +614,8 @@
 
 .contact_info-email {
   display: inline;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: left;
@@ -645,8 +649,8 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 40px 30px 40px;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: left;
