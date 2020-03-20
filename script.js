@@ -136,9 +136,9 @@ window.addEventListener("load", () => {
     } else if (isContainsClass(target, "portfolio-illustration-item")) {
       setUniqueInSiblings(event.target, "portfolio-image-outlined");
     } else if (isContainsClass(target, "arrow-left")) {
-      moveSlider(sliderSpeed * -1);
+      moveSlider(sliderSpeed );
     } else if (isContainsClass(target, "arrow-right")) {
-      moveSlider(sliderSpeed);
+      moveSlider(sliderSpeed * -1);
     }
   }
 
