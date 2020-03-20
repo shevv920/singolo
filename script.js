@@ -12,10 +12,10 @@ window.addEventListener("load", () => {
   const slider       = document.querySelector(".slider");
   const sliderScreen = document.querySelector(".slider-screen");
   const offset       = getElementWidth(sliderScreen);
-  const slides       = document.querySelectorAll(".slider-screen > div");
+  const slides       = [...document.querySelectorAll(".slider-screen > div")];
   const sliderSpeed  = 10;
   const headerLinks  = [...document.querySelectorAll(".header-nav-link")];
-  //scroll via intersection observer api
+  //react to scroll via intersection observer api
   const options = {
     root: null,
     rootMargin: "0px",
@@ -79,11 +79,18 @@ window.addEventListener("load", () => {
 
   function moveSlider(rate) {
     if(timer !== undefined) return;
-    slides.forEach(s => {
-      const curOffset = getElementLeftOffset(s);
-      if(rate < 0 && curOffset < 0) s.style.left = (curOffset * -1) + "px";
-      if(rate > 0 && curOffset > 0) s.style.left = (curOffset * -1) + "px";  
-    });
+
+    const filteredByLeftOffset = slides
+      .sort((sl1, sl2) => getElementLeftOffset(sl1) - getElementLeftOffset(sl2))      
+    if(rate < 0) {
+      const leftMost = filteredByLeftOffset.filter(s => getElementLeftOffset(s) < 0)[0];
+      if(leftMost !== undefined) 
+        leftMost.style.left = getElementLeftOffset(leftMost) * -1 + "px";
+    } else if (rate > 0) {
+      const rightMost = filteredByLeftOffset.filter(s => getElementLeftOffset(s) > 0)[0];
+      if(rightMost !== undefined) 
+        rightMost.style.left = getElementLeftOffset(rightMost) * -1 + "px";
+    }    
     let i = offset;
     timer = setInterval(() => {
       slides.forEach(s => s.style.left = (getElementLeftOffset(s) + rate) + "px");
