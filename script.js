@@ -1,3 +1,7 @@
+Array.prototype.getOrElse = function(i, def) { 
+  return (this[i] === undefined ? def : this[i]); 
+}
+
 window.addEventListener("load", () => {
   document.addEventListener("click", ev => mainHandler(ev));
   document.addEventListener("submit", ev => formSubmitHandler(ev));
@@ -8,7 +12,7 @@ window.addEventListener("load", () => {
   const getElementLeftOffset = elem => Number(elem.style.left.replace(/[^\-\d]/g, ""));
   const getElementWidth      = elem => Number(window.getComputedStyle(elem).width.replace(/[^\d\-]/g, ""));
   const isContainsClass      = (elem, cls) => elem.classList.contains(cls);
-
+ 
   const slider       = document.querySelector(".slider");
   const sliderScreen = document.querySelector(".slider-screen");
   const offset       = getElementWidth(sliderScreen);
@@ -81,16 +85,20 @@ window.addEventListener("load", () => {
     if(timer !== undefined) return;
 
     const filteredByLeftOffset = slides
-      .sort((sl1, sl2) => getElementLeftOffset(sl1) - getElementLeftOffset(sl2))      
-    if(rate < 0) {
-      const leftMost = filteredByLeftOffset.filter(s => getElementLeftOffset(s) < 0)[0];
-      if(leftMost !== undefined) 
-        leftMost.style.left = getElementLeftOffset(leftMost) * -1 + "px";
-    } else if (rate > 0) {
-      const rightMost = filteredByLeftOffset.filter(s => getElementLeftOffset(s) > 0)[0];
-      if(rightMost !== undefined) 
-        rightMost.style.left = getElementLeftOffset(rightMost) * -1 + "px";
+      .sort((sl1, sl2) => getElementLeftOffset(sl1) - getElementLeftOffset(sl2));
+      
+    const leftSlides  = filteredByLeftOffset.filter(s => getElementLeftOffset(s) < 0);
+    const rightSlides = filteredByLeftOffset.filter(s => getElementLeftOffset(s) > 0);
+
+    const leftMost  = leftSlides[0];
+    const rightMost = rightSlides[rightSlides.length - 1];
+
+    if (rate < 0 && rightMost === undefined) {      
+      leftMost.style.left = offset + "px";
+    } else if (rate > 0 && leftMost === undefined) {  
+      rightMost.style.left = (offset * -1) + "px";
     }    
+
     let i = offset;
     timer = setInterval(() => {
       slides.forEach(s => s.style.left = (getElementLeftOffset(s) + rate) + "px");
