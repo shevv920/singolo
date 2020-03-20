@@ -682,4 +682,41 @@ html {
   .slider-screen > * {
     transform: scale(0.8);
   }
+
+  .services-items {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(94px, 94px) minmax(94px, 94px) minmax(94px, 94px);
+  }
+
+  .portfolio-illustration {
+    grid-template-columns: 220px 220px 220px;
+    grid-template-rows: 187px 187px 187px 187px;
+  }
+
+  .about_us-persons {
+    grid-template-columns: minmax(219px, 219px) minmax(219px, 219px) minmax(219px, 219px);
+    gap: 0 15px;
+  }
+
+  .person-photo {
+    max-width: 219px;
+    max-height: 219px;
+  }
+
+  .person-photo > img {
+    width: 219px;
+    height: 219px;
+  }
+
+  .person-name {
+    margin-top: 12px;
+  }
+
+  .person-description {
+    margin-top: 5px;
+  }
+
+  .social_buttons {
+    margin-top: 9px;
+  }
 }
