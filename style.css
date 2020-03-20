@@ -175,6 +175,7 @@
   right: 65px;
   top: 142px;
   transform: rotate(90deg);
+  cursor: pointer;
 }
 
 .iphone-shadow-horizontal {
