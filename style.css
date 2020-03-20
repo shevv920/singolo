@@ -152,6 +152,7 @@
   position: absolute;
   top: 21px;
   left: 40px;
+  cursor: pointer;
 }
 
 .iphone-shadow-vertical {
@@ -159,6 +160,7 @@
   top: 1px;
   left: 2px;
   z-index: 900;
+  cursor: default;
 }
 
 .iphone-screen-content-vertical {
@@ -179,6 +181,7 @@
   position: absolute;
   top: -24px;
   right: -242px;
+  cursor: default;
   transform: scale(-1, 1);
 }
 
