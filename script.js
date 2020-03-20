@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 1.0
+    threshold: 0.55
   }
   const observeCallback = (entries, observer) => {
     entries.forEach(entry => {
