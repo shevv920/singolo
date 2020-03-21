@@ -5,15 +5,13 @@ window.addEventListener("load", () => {
   document.querySelector(".iphone-vertical").addEventListener('click', event => toggleVertical(event));
   document.querySelector(".iphone-horizontal").addEventListener('click', event => toggleHorizontal(event));
 
-  const getElementLeftOffset = elem => Number(elem.style.left.replace(/[^\-\d]/g, ""));
-  const getElementWidth      = elem => Number(window.getComputedStyle(elem).width.replace(/[^\d\-]/g, ""));
-  const isContainsClass      = (elem, cls) => elem.classList.contains(cls);
+  const containsClass      = (elem, cls) => elem.classList.contains(cls);
  
   const slider       = document.querySelector(".slider");
-  const sliderScreen = document.querySelector(".slider-screen");
-  const offset       = getElementWidth(sliderScreen);
-  const slides       = [...document.querySelectorAll(".slider-screen > div")];
-  const sliderSpeed  = 10;
+  const slides       = [...document.querySelectorAll(".slide")];
+  let currentSlide   = 0;
+  let sliderEnabled  = true;
+
   const headerLinks  = [...document.querySelectorAll(".header-nav-link")];
   //react to scroll via intersection observer api
   const options = {
@@ -37,10 +35,6 @@ window.addEventListener("load", () => {
   const homeA     = document.querySelector("#home");
   observer.observe(homeA);
   navPoints.forEach(c => observer.observe(c));
-  
-  //init slides
-  slides.forEach((s, i) => s.style.left = (i * offset) + "px");
-  let timer = undefined;
 
   function setUniqueInSiblings(target, cls) {
     if([...target.classList].some(e => e === cls))
@@ -50,73 +44,58 @@ window.addEventListener("load", () => {
     siblings.forEach(sib => sib.classList.remove(cls));
     return true; 
   }
-  
-  /**
-   * 
-   * @param {*} array source array
-   * @param {*} beginIndex index in source array to start from
-   * @param {*} requiredLength required result array length
-   */
-  function fromArray (array, beginIndex, requiredLength) {
-    if(array.length === 0) return array;
-    else return loop([], requiredLength, beginIndex);
-    function loop(acc, rem, curIndex) {
-      if(rem == 0) return acc;
-      if(array[curIndex] === undefined) return loop(acc, rem, 0);
-      else return loop([...acc, array[curIndex]], rem - 1, curIndex + 1);      
-    }
-  }
 
-  function portfolioShuffle(beginIndex = 0) {
+  function portfolioShuffle() {
     const illustrations = document.querySelector(".portfolio-illustration");
     const images        = [...illustrations.children];
-    const mixed         = fromArray(images, beginIndex, images.length);
+    images.unshift(images.pop());
     while(illustrations.firstChild) {
       illustrations.firstChild.remove();
     }
-    illustrations.append(...mixed);
+    illustrations.append(...images);
   }
 
-  function moveSlider(rate) {
-    if(timer !== undefined) return;
-
-    const filteredByLeftOffset = slides
-      .sort((sl1, sl2) => getElementLeftOffset(sl1) - getElementLeftOffset(sl2));
-      
-    const leftSlides  = filteredByLeftOffset.filter(s => getElementLeftOffset(s) < 0);
-    const rightSlides = filteredByLeftOffset.filter(s => getElementLeftOffset(s) > 0);
-
-    const leftMost  = leftSlides[0];
-    const rightMost = rightSlides[rightSlides.length - 1];
-
-    if (rate < 0 && rightMost === undefined) {      
-      leftMost.style.left = offset + "px";
-    } else if (rate > 0 && leftMost === undefined) {  
-      rightMost.style.left = (offset * -1) + "px";
-    }    
-
-    let i = offset;
-    timer = setInterval(() => {
-      slides.forEach(s => s.style.left = (getElementLeftOffset(s) + rate) + "px");
-      i -= Math.abs(rate);
-      if(i <= 0) { //move finished
-        clearInterval(timer);
-        timer = undefined;
-        const curSlide = [...slides].filter(s => getElementLeftOffset(s) === 0)[0];
-        const bgColor = window.getComputedStyle(curSlide, null).getPropertyValue("background-color");
-        slider.style.backgroundColor = bgColor;
-      }
-    }, 5);    
+  function hideSlide(direction) {
+    sliderEnabled = false;
+    slides[currentSlide].classList.add(direction);
+    slides[currentSlide].addEventListener("animationend", function() {
+      this.classList.remove("current-slide", direction);
+    })
   }
-  
+
+  function showSlide(direction) {
+    slides[currentSlide].classList.add("next-slide", direction);
+    slides[currentSlide].addEventListener("animationend", function() {
+      this.classList.remove("next-slide", direction);
+      this.classList.add("current-slide");
+      sliderEnabled = true;
+    })
+  }
+
+  function changeCurrentSlide(n) {
+    currentSlide = (slides.length + n) % slides.length;
+  }
+
+  function previousSlide() {
+    hideSlide("to-right");
+    changeCurrentSlide(currentSlide - 1);
+    showSlide("from-left");
+  }
+
+  function nextSlide() {
+    hideSlide("to-left");
+    changeCurrentSlide(currentSlide + 1);
+    showSlide("from-right");
+  }
+
   function toggleVertical(event) {
-    if(isContainsClass(event.target, "iphone-shadow-vertical")) return;
+    if(containsClass(event.target, "iphone-shadow-vertical")) return;
     const screenContent = document.querySelector(".iphone-vertical > .iphone-screen-content-vertical");
     screenContent.style.display = screenContent.style.display === "none" ? "block" : "none";
   }
 
   function toggleHorizontal(event) {
-    if(isContainsClass(event.target, "iphone-shadow-horizontal")) return;
+    if(containsClass(event.target, "iphone-shadow-horizontal")) return;
     const screenContent = document.querySelector(".iphone-horizontal > .iphone-screen-content-horizontal");
     screenContent.style.display = screenContent.style.display === "none" ? "block" : "none";
   }
@@ -124,21 +103,20 @@ window.addEventListener("load", () => {
   function mainHandler(event) {
     const target = event.target;
 
-    if(isContainsClass(target, "header-nav-link")) {
+    if(containsClass(target, "header-nav-link")) {
       event.preventDefault();
       const scrollTarget = document.querySelector(event.target.getAttribute("href"));
       scrollTarget.scrollIntoView({behavior: "smooth"});
-    } else if(isContainsClass(target, "portfolio-nav-button")) {
+    } else if(containsClass(target, "portfolio-nav-button")) {
       if(setUniqueInSiblings(event.target, "portfolio-nav-button-active")) {
-        const index = [...event.target.parentElement.children].indexOf(event.target) + 1;
-        portfolioShuffle(index);
+        portfolioShuffle();
       }
-    } else if (isContainsClass(target, "portfolio-illustration-item")) {
+    } else if (containsClass(target, "portfolio-illustration-item")) {
       setUniqueInSiblings(event.target, "portfolio-image-outlined");
-    } else if (isContainsClass(target, "arrow-left")) {
-      moveSlider(sliderSpeed );
-    } else if (isContainsClass(target, "arrow-right")) {
-      moveSlider(sliderSpeed * -1);
+    } else if (containsClass(target, "arrow-left")) {
+      if(sliderEnabled) previousSlide();
+    } else if (containsClass(target, "arrow-right")) {
+      if(sliderEnabled) nextSlide();
     }
   }
 
