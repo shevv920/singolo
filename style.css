@@ -10,6 +10,10 @@ html {
   font-size: 10px;
 }
 
+.hidden {
+  display: none;
+}
+
 .wrapper {
   width: 1020px;
   margin: 0 auto;
@@ -65,6 +69,10 @@ html {
 
 .header-logo-extra {
   color: #f06c64;
+}
+
+.header-nav-menu-button {
+  display: none;
 }
 
 .header-nav {
@@ -577,7 +585,6 @@ html {
 }
 
 #form_submit_res-container {
-  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -825,8 +832,40 @@ html {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .wrapper {
     width: 100%;
+  }
+
+  .header {
+    justify-content: center;
+    padding: 20px 40px 15px 40px;
+  }
+
+  .header-nav {
+    position: fixed;
+    height: 100%;
+    width: 278px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 24px 0 0 71px;
+  }
+
+  .header-nav-menu-button {
+    display: block;
+    position: absolute;
+    top: 26px;
+    left: 20px;
+  }
+
+  .header-nav-list-item {
+    display: block;
+  }
+
+  .header-nav-list-item::after {
+    margin: 0;
+    content: "";
   }
 }

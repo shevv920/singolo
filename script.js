@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.55
+    threshold: 0.65
   }
   const observeCallback = (entries, observer) => {
     entries.forEach(entry => {
@@ -92,13 +92,13 @@ window.addEventListener("load", () => {
   function toggleVertical(event) {
     if(containsClass(event.target, "iphone-shadow-vertical")) return;
     const screenContent = document.querySelector(".iphone-vertical > .iphone-screen-content-vertical");
-    screenContent.style.display = screenContent.style.display === "none" ? "block" : "none";
+    screenContent.classList.toggle("hidden");
   }
 
   function toggleHorizontal(event) {
     if(containsClass(event.target, "iphone-shadow-horizontal")) return;
     const screenContent = document.querySelector(".iphone-horizontal > .iphone-screen-content-horizontal");
-    screenContent.style.display = screenContent.style.display === "none" ? "block" : "none";
+    screenContent.classList.toggle("hidden");
   }
 
   function mainHandler(event) {
@@ -118,7 +118,14 @@ window.addEventListener("load", () => {
       if(sliderEnabled) previousSlide();
     } else if (containsClass(target, "arrow-right")) {
       if(sliderEnabled) nextSlide();
+    } else if (containsClass(target, "header-nav-menu-button")) {
+      toggleBurgerMenu();
     }
+  }
+
+  function toggleBurgerMenu() {
+    const menuIcon = document.querySelector(".header-nav-menu-button");
+    const menu     = document.querySelector(".header-nav");
   }
 
   function formSubmitHandler(event) {
@@ -134,10 +141,10 @@ window.addEventListener("load", () => {
     resDescr.textContent   = descr !== "" ? `Description: ${descr}` : "Without description";
 
     const windowContainer = document.querySelector("#form_submit_res-container");
-    windowContainer.style.display = "block";
+    windowContainer.classList.toggle("hidden");
     const btn = document.querySelector("#form_submit-confirm_btn");
     btn.onclick = () => {
-      windowContainer.style.display = "none";
+      windowContainer.classList.add("hidden");
       form.reset();
     }    
   }
