@@ -69,6 +69,7 @@ window.addEventListener("load", () => {
       this.classList.remove("next-slide", direction);
       this.classList.add("current-slide");
       sliderEnabled = true;
+      slider.style.backgroundColor = window.getComputedStyle(slides[currentSlide])['background-color'];
     })
   }
 

@@ -133,14 +133,10 @@ html {
 }
 
 .slide-1 {
-  position: relative;
-  left: 0;
   background-color: #f06c64;
 }
 
 .slide-2 {
-  position: relative;
-  top: 6px;
   background-color: #648bf0;
 }
 
@@ -722,11 +718,11 @@ html {
 
 @media (max-width: 1019px) {
   .wrapper {
-    width: 768px;
+    width: 100%;
   }
 
   .sticky {
-    width: 768px;
+    width: 100%;
   }
 
   .slider {
@@ -825,5 +821,11 @@ html {
 
   .contact_info-links {
     margin: 12px 0 0 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    width: 100%;
   }
 }
