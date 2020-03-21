@@ -584,6 +584,7 @@ html {
   top: 0;
   width: 100%;
   height: 100%;
+  font-size: 2rem;
   overflow: auto;
   background-color: rgba(192, 191, 191, 0.9);
 }
