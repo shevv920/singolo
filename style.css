@@ -110,10 +110,6 @@ html {
   color: #ffffff;
 }
 
-.header-nav-link:hover {
-  color: #f06c64;
-}
-
 .active {
   color: #f06c64;
 }
@@ -599,7 +595,7 @@ html {
 #form_submit_res-content {
   margin: 35% auto;
   padding: 20px;
-  width: 620px;
+  width: 70%;
   background-color: #d6564f;
   border: 1px solid #b1b1b1;
 }
@@ -856,6 +852,8 @@ html {
   .header-nav-menu-button {
     display: block;
     position: absolute;
+    cursor: pointer;
+    z-index: 2;
     top: 26px;
     left: 20px;
   }
@@ -867,5 +865,9 @@ html {
   .header-nav-list-item::after {
     margin: 0;
     content: "";
+  }
+
+  .slider-screen > * {
+    transform: scale(0.6);
   }
 }
