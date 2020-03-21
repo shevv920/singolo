@@ -512,16 +512,16 @@ html {
 }
 
 .get_a_quote-submit_button {
-  justify-self: right;
+  justify-self: left;
   width: fit-content;
-  padding: 8px;
+  padding: 8px 45px;
   font-size: 1.6rem;
   line-height: 2.2rem;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-align: left;
-  color: #f48c8f;
-  background-color: #d6564f;
+  color: #886a30;
+  background-color: #fbc65f;
   border: none;
   border-radius: 5px;
 }
@@ -679,8 +679,35 @@ html {
     width: 768px;
   }
 
+  .slider {
+    padding: 3px 40px;
+  }
+
+  .slider-screen {
+    min-height: 440px;
+  }
+
   .slider-screen > * {
     transform: scale(0.8);
+  }
+
+  .slide-2 {
+    top: 0;
+  }
+
+  .slide-2-img {
+    left: 80px;
+    top: 37px;
+  }
+
+  .iphone-vertical {
+    top: 34px;
+    left: -56px;
+  }
+
+  .iphone-horizontal {
+    right: -50px;
+    top: 145px;
   }
 
   .services-items {
@@ -718,5 +745,35 @@ html {
 
   .social_buttons {
     margin-top: 9px;
+  }
+
+  .get_a_quote {
+    padding: 53px 40px 40px 40px;
+  }
+
+  .get_a_quote-container {
+    padding-top: 15px;
+    gap: 30px;
+  }
+
+  .get_a_quote-form {
+    gap: 12px;
+  }
+
+  .get_a_quote-form-input,
+  .get_a_quote-form-textarea {
+    width: 442px;
+  }
+
+  .get_a_quote-submit_button {
+    margin-top: 7px;
+  }
+
+  .contact_info-description {
+    margin: 0;
+  }
+
+  .contact_info-links {
+    margin: 12px 0 0 0;
   }
 }
