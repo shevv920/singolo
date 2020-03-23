@@ -15,7 +15,8 @@ html {
 }
 
 .wrapper {
-  width: 1020px;
+  width: 100%;
+  max-width: 1020px;
   margin: 0 auto;
 }
 
@@ -48,10 +49,11 @@ html {
 }
 
 .sticky {
+  width: 100%;
+  max-width: 1020px;
   position: fixed;
   top: 0;
   z-index: 1500;
-  width: 1020px;
 }
 
 .sticky + .content {
@@ -114,11 +116,16 @@ html {
   color: #f06c64;
 }
 
+#home {
+  scroll-margin-top: 95px;
+}
+
 .slider {
   padding: 30px 40px 24px 40px;
   display: grid;
-  grid-template-columns: 30px auto 30px;
+  grid-template-columns: 5.55% auto 5.55%;
   align-items: center;
+  justify-items: center;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
 }
@@ -126,6 +133,7 @@ html {
 .slider-screen {
   position: relative;
   min-height: 540px;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -151,12 +159,10 @@ html {
 
 .arrow-left {
   cursor: pointer;
-  padding: 0 0 12px 2px;
 }
 
 .arrow-right {
   cursor: pointer;
-  padding: 0 6px 12px 14px;
 }
 
 .current-slide,
@@ -440,11 +446,13 @@ html {
 .about_us-persons {
   display: grid;
   margin-top: 44px;
-  grid-template-columns: minmax(300px, 300px) minmax(300px, 300px) minmax(300px, 300px);
-  gap: 20px 20px;
+  grid-template-columns: minmax(min-content, 29.41vw) minmax(min-content, 29.41vw) minmax(min-content, 29.41vw);
+  gap: 1.96vw 1.96vw;
 }
 
 .person-photo {
+  width: 29.41vw;
+  height: 29.41vw;
   max-width: 300px;
   max-height: 300px;
   overflow: hidden;
@@ -720,6 +728,13 @@ html {
   justify-content: space-between;
 }
 
+@media (min-width: 1020px) {
+  .about_us-persons {
+    grid-template-columns: minmax(300px, 300px) minmax(300px, 300px) minmax(300px, 300px);
+    gap: 20px 20px;
+  }
+}
+
 @media (max-width: 1019px) {
   .wrapper {
     width: 100%;
@@ -730,7 +745,8 @@ html {
   }
 
   .slider {
-    padding: 3px 40px;
+    padding: 0 27px;
+    grid-template-columns: 2% auto 2%;
   }
 
   .slider-screen {
@@ -742,12 +758,7 @@ html {
   }
 
   .slide-2 {
-    top: 0;
-  }
-
-  .slide-2-img {
-    left: 80px;
-    top: 37px;
+    top: 6%;
   }
 
   .iphone-vertical {
@@ -760,29 +771,32 @@ html {
     top: 145px;
   }
 
+  .services {
+    padding: 40px 41px 64px 39px;
+  }
+
   .services-items {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(94px, 94px) minmax(94px, 94px) minmax(94px, 94px);
   }
 
   .portfolio-illustration {
-    grid-template-columns: 220px 220px 220px;
-    grid-template-rows: 187px 187px 187px 187px;
+    grid-template-columns: 216px 216px 216px;
+    grid-template-rows: 183px 183px 183px 183px;
+  }
+
+  .portfolio-illustration-item {
+    width: 100%;
   }
 
   .about_us-persons {
-    grid-template-columns: minmax(219px, 219px) minmax(219px, 219px) minmax(219px, 219px);
-    gap: 0 15px;
+    grid-template-columns: minmax(28.52vw, 28.52vw) minmax(28.52vw, 28.52vw) minmax(28.52vw, 28.52vw);
+    gap: 0 1.96vw;
   }
 
   .person-photo {
-    max-width: 219px;
-    max-height: 219px;
-  }
-
-  .person-photo > img {
-    width: 219px;
-    height: 219px;
+    max-width: 28.52vw;
+    max-height: 28.52vw;
   }
 
   .person-name {
@@ -828,7 +842,7 @@ html {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   .wrapper {
     width: 100%;
   }

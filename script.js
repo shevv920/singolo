@@ -5,6 +5,8 @@ window.addEventListener("load", () => {
   document.querySelector(".iphone-vertical").addEventListener('click', event => toggleVertical(event));
   document.querySelector(".iphone-horizontal").addEventListener('click', event => toggleHorizontal(event));
 
+  scrollHandler(); //check if sticky header has to be enabled
+
   const containsClass      = (elem, cls) => elem.classList.contains(cls);
  
   const slider       = document.querySelector(".slider");
@@ -17,7 +19,7 @@ window.addEventListener("load", () => {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.65
+    threshold: 0.70
   }
   const observeCallback = (entries, observer) => {
     entries.forEach(entry => {

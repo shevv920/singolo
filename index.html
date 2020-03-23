@@ -9,7 +9,6 @@
 </head>
 <body>
   <div class="wrapper">
-    <a id="home"></a>
     <div class="header">
       <svg class="header-nav-menu-button" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.2C0 0.537259 0.537259 0 1.2 0H23.8C24.4627 0 25 0.537259 25 1.2C25 1.86274 24.4627 2.4 23.8 2.4H1.2C0.537259 2.4 0 1.86274 0 1.2ZM0 10C0 9.33726 0.537259 8.8 1.2 8.8H23.8C24.4627 8.8 25 9.33726 25 10C25 10.6627 24.4627 11.2 23.8 11.2H1.2C0.537259 11.2 0 10.6627 0 10ZM1.2 17.6C0.53726 17.6 0 18.1373 0 18.8C0 19.4627 0.537259 20 1.2 20H23.8C24.4627 20 25 19.4627 25 18.8C25 18.1373 24.4627 17.6 23.8 17.6H1.2Z" fill="white"/>
@@ -40,7 +39,7 @@
       </nav>
     </div>
     <div class="content">
-      <section class="slider">
+      <section class="slider" id="home">
         <img class="arrow-left" src="assets/arrow_left.png" alt="slider left arrow">
         <div class="slider-screen">
           <div class="slide slide-1 current-slide">            
@@ -62,7 +61,7 @@
         <img class="arrow-right" src="assets/arrow_right.png" alt="slider right arrow">
       </section>
       <section class="services" id="services">
-        <div class="section-title">Our Services</div>
+        <h6 class="section-title">Our Services</h6>
         <p class="section-description">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
           Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
@@ -114,7 +113,7 @@
         </div>
       </section>
       <section class="portfolio" id="portfolio">
-        <div class="section-title">Portfolio</div>
+        <h6 class="section-title">Portfolio</h6>
         <div class="section-description">
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
         </div>
@@ -140,9 +139,7 @@
         </div>
       </section>
       <section class="about_us" id="about">
-        <div class="section-title">
-          About Us
-        </div>
+        <h6 class="section-title">About Us</h6>
         <div class="section-description">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
           Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
@@ -150,7 +147,7 @@
         </div>
         <div class="about_us-persons">
           <div class="about_us-person">
-            <div class="person-photo"><img src="assets/about_photos/photo_1.png"></div>
+            <img class="person-photo" src="assets/about_photos/photo_1.png">
             <div class="person-name">Adam Jensen</div>
             <div class="person-description">Quisque luctus, quam eget molestie commodom lacus purus cursus purus, nec rutrum tellus dolor id lorem.</div>
             <div class="social_buttons">
@@ -169,7 +166,7 @@
             </div>
           </div>
           <div class="about_us-person">
-            <div class="person-photo"><img src="assets/about_photos/photo_2.png"></div>
+            <img class="person-photo" src="assets/about_photos/photo_2.png">
             <div class="person-name">Desmond Miles</div>
             <div class="person-description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</div>
             <div class="social_buttons">
@@ -188,7 +185,7 @@
             </div>
           </div>
           <div class="about_us-person">
-            <div class="person-photo"><img src="assets/about_photos/photo_3.png"></div>
+            <img class="person-photo" src="assets/about_photos/photo_3.png">
             <div class="person-name">Scolara Visari</div>
             <div class="person-description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</div>
             <div class="social_buttons">
@@ -209,7 +206,7 @@
         </div>
       </section>
       <section class="get_a_quote" id="contact">
-        <div class="section-title">Get a Quote</div>
+        <h6 class="section-title">Get a Quote</h6>
         <div class="section-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
         <div class="get_a_quote-container">
           <form class="get_a_quote-form" id="get_a_quote-form" action="#" method="POST">
