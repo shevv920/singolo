@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
 
   scrollHandler(); //check if sticky header has to be enabled
 
-  const containsClass      = (elem, cls) => elem.classList.contains(cls);
+  const containsClass = (elem, cls) => elem.classList.contains(cls);
  
   const slider       = document.querySelector(".slider");
   const slides       = [...document.querySelectorAll(".slide")];
@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
   navPoints.forEach(c => observer.observe(c));
 
   function setUniqueInSiblings(target, cls) {
-    if([...target.classList].some(e => e === cls))
+    if(containsClass(target, cls))
       return false;
     const siblings = [...document.getElementsByClassName(cls)].filter(e => e.id !== target.id);
     target.classList.add(cls);
