@@ -534,7 +534,8 @@ html {
 
 .get_a_quote-form-input,
 .get_a_quote-form-textarea {
-  width: 619px;
+  width: 60.69vw;
+  max-width: 619px;
   padding: 8px 2px 8px 14px;
   overflow: hidden;
   font-size: 1.2rem;
@@ -780,6 +781,10 @@ html {
     grid-template-rows: minmax(94px, 94px) minmax(94px, 94px) minmax(94px, 94px);
   }
 
+  .portfolio {
+    padding: 59px 32px 73px 41px;
+  }
+
   .portfolio-illustration {
     grid-template-columns: 216px 216px 216px;
     grid-template-rows: 183px 183px 183px 183px;
@@ -826,7 +831,7 @@ html {
 
   .get_a_quote-form-input,
   .get_a_quote-form-textarea {
-    width: 442px;
+    width: 57.55vw;
   }
 
   .get_a_quote-submit_button {
@@ -842,7 +847,7 @@ html {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .wrapper {
     width: 100%;
   }
@@ -850,6 +855,10 @@ html {
   .header {
     justify-content: center;
     padding: 20px 40px 15px 40px;
+  }
+
+  .sticky + .content {
+    padding: 71px 0 0 0;
   }
 
   .header-nav {
@@ -861,19 +870,27 @@ html {
     left: 0;
     margin: 0;
     padding: 24px 0 0 71px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header-nav-list-item {
+    padding: 10px 0;
+    display: block;
+  }
+
+  .header-nav-link {
+    font-size: 2rem;
   }
 
   .header-nav-menu-button {
     display: block;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     z-index: 2;
     top: 26px;
     left: 20px;
-  }
-
-  .header-nav-list-item {
-    display: block;
   }
 
   .header-nav-list-item::after {
@@ -881,7 +898,73 @@ html {
     content: "";
   }
 
+  .slider-screen {
+    min-height: 220px;
+  }
+
   .slider-screen > * {
-    transform: scale(0.6);
+    transform: scale(0.4);
+  }
+
+  .services-items {
+    margin-top: 25px;
+    grid-template-columns: 80vw;
+    gap: 15px 0;
+  }
+
+  .portfolio {
+    padding: 42px 30px;
+  }
+
+  .portfolio-illustration {
+    max-height: 147.47vw;
+    margin: 25px 0 0 0;
+    grid-template-columns: 40.27vw 40.27vw;
+    grid-template-rows: 34.13vw 34.13vw 34.13vw 34.13vw;
+    gap: 14px 13px;
+  }
+
+  .portfolio-illustration:nth-child(n+8) {
+    display: none;
+  }
+
+  .about_us {
+    padding: 8.8vw 8vw;
+  }
+
+  .about_us-persons {
+    margin: 14px 0 0 0;
+    grid-template-columns: 83.73vw;
+    grid-template-rows: 117.33vw 117.33vw 117.33vw;
+  }
+
+  .person-photo {
+    width: 83.73vw;
+    height: 83.73vw;
+    max-width: 83.73vw;
+    max-height: 83.73vw;
+  }
+
+  .get_a_quote {
+    padding: 8.8vw 8vw;
+  }
+
+  .get_a_quote-container {
+    grid-template-columns: 84vw;
+    gap: 5vw;
+  }
+
+  .get_a_quote-form-input,
+  .get_a_quote-form-textarea {
+    width: 84vw;
+  }
+
+  .footer {
+    padding: 22px 0;
+    justify-content: center;
+  }
+
+  .footer-copyright {
+    display: none;
   }
 }
