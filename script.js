@@ -5,38 +5,16 @@ window.addEventListener("load", () => {
   document.querySelector(".iphone-vertical").addEventListener('click', event => toggleVertical(event));
   document.querySelector(".iphone-horizontal").addEventListener('click', event => toggleHorizontal(event));
 
-  scrollHandler(); //check if sticky header has to be enabled
-
   const containsClass = (elem, cls) => elem.classList.contains(cls);
  
+  scrollHandler(); //check if sticky header has to be enabled
+
   const slider       = document.querySelector(".slider");
   const slides       = [...document.querySelectorAll(".slide")];
   let currentSlide   = 0;
   let sliderEnabled  = true;
 
-  const headerLinks  = [...document.querySelectorAll(".header-nav-link")];
-  //react to scroll via intersection observer api
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.70
-  }
-  const observeCallback = (entries, observer) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        const elem     = entry.target;
-        const targetId = elem.getAttribute("id");
-        headerLinks
-          .filter(l => l.getAttribute("href").substring(1) === targetId)
-          .forEach(l => setUniqueInSiblings(l, "active"));
-      }
-    });
-  };
-  const observer  = new IntersectionObserver(observeCallback, options); 
-  const navPoints = document.querySelectorAll(".content > section");
-  const homeA     = document.querySelector("#home");
-  observer.observe(homeA);
-  navPoints.forEach(c => observer.observe(c));
+  const headerLinks  = [...document.querySelectorAll(".header-nav-link")];  
 
   function setUniqueInSiblings(target, cls) {
     if(containsClass(target, cls))
@@ -128,6 +106,8 @@ window.addEventListener("load", () => {
   function toggleBurgerMenu() {
     const menuIcon = document.querySelector(".header-nav-menu-button");
     const menu     = document.querySelector(".header-nav");
+    menu.classList.toggle("hidden");
+    menuIcon.classList.toggle("rotated");
   }
 
   function formSubmitHandler(event) {
@@ -155,6 +135,17 @@ window.addEventListener("load", () => {
     const header      = document.querySelector(".header");
     const headerOff   = header.offsetTop;
     const pageYOffset = window.pageYOffset;
+    const menuLinks   = [...document.querySelectorAll(".header-nav-link")];
+    const anchors     = [document.querySelector("#home"), ...document.querySelectorAll(".content > section")];
+    const curPos      = window.scrollY + 95;
+    
+    anchors.forEach (anchor => {
+      if(curPos >= anchor.offsetTop && (anchor.offsetTop + anchor.offsetHeight) >= curPos) {
+        menuLinks
+          .filter(ml => ml.getAttribute("href").substring(1) === anchor.getAttribute("id"))
+          .forEach(ml => setUniqueInSiblings(ml, "active"));
+      }
+    })
 
     if(pageYOffset > headerOff) 
       header.classList.add("sticky");
