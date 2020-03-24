@@ -132,12 +132,13 @@ window.addEventListener("load", () => {
   }
 
   function scrollHandler() {
-    const header      = document.querySelector(".header");
-    const headerOff   = header.offsetTop;
-    const pageYOffset = window.pageYOffset;
-    const menuLinks   = [...document.querySelectorAll(".header-nav-link")];
-    const anchors     = [document.querySelector("#home"), ...document.querySelectorAll(".content > section")];
-    const curPos      = window.scrollY + 95;
+    const header       = document.querySelector(".header");
+    const headerOff    = header.offsetTop;
+    const pageYOffset  = window.pageYOffset;
+    const menuLinks    = [...document.querySelectorAll(".header-nav-link")];
+    const anchors      = [document.querySelector("#home"), ...document.querySelectorAll(".content > section")];
+    const headerHeight = parseFloat(window.getComputedStyle(header, null).height);
+    const curPos       = window.scrollY + headerHeight;
     
     anchors.forEach (anchor => {
       if(curPos >= anchor.offsetTop && (anchor.offsetTop + anchor.offsetHeight) >= curPos) {
