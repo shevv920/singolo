@@ -14,14 +14,12 @@ window.addEventListener("load", () => {
   let currentSlide   = 0;
   let sliderEnabled  = true;
 
-  const headerLinks  = [...document.querySelectorAll(".header-nav-link")];  
-
   function setUniqueInSiblings(target, cls) {
     if(containsClass(target, cls))
       return false;
-    const siblings = [...document.getElementsByClassName(cls)].filter(e => e.id !== target.id);
-    target.classList.add(cls);
+    const siblings = [...document.getElementsByClassName(cls)];
     siblings.forEach(sib => sib.classList.remove(cls));
+    target.classList.add(cls);
     return true; 
   }
 
