@@ -159,8 +159,8 @@ html {
 
 .slide-2-img {
   position: absolute;
-  top: 4.5vw;
-  left: 16%;
+  top: 2.5vw;
+  left: 23%;
 }
 
 .arrow-left {
@@ -290,8 +290,7 @@ html {
   grid-template-areas:
     "icon title"
     "icon description";
-  grid-column-gap: 20px;
-  grid-row-gap: 10px;
+  gap: 10px 20px;
   padding: 0;
   align-items: start;
   overflow: hidden;
@@ -373,72 +372,17 @@ html {
   gap: 20px 20px;
 }
 
+.portfolio-illustration > img {
+  width: 100%;
+  height: 100%;
+}
+
 .portfolio-illustration:nth-child(n+13) {
   display: none;
 }
 
 .portfolio-image-outlined {
   outline: 5px solid #f06c64;
-}
-
-#portfolio-item1 {
-  background-image: url("assets/portfolio/project1.png");
-  background-position: -8px -11px;
-}
-
-#portfolio-item2 {
-  background-image: url("assets/portfolio/project2.png");
-  background-position: -82px -43px;
-}
-
-#portfolio-item3 {
-  background-image: url("assets/portfolio/project3.png");
-  background-position: -11px -1px;
-}
-
-#portfolio-item4 {
-  background-image: url("assets/portfolio/project4.png");
-  background-position: -24px -2px;
-}
-
-#portfolio-item5 {
-  background-image: url("assets/portfolio/project5.png");
-  background-position: -10px -16px;
-}
-
-#portfolio-item6 {
-  background-image: url("assets/portfolio/project6.png");
-  background-position: -16px -4px;
-}
-
-#portfolio-item7 {
-  background-image: url("assets/portfolio/project7.png");
-  background-position: -31px -39px;
-}
-
-#portfolio-item8 {
-  background-image: url("assets/portfolio/project8.png");
-  background-position: -24px -32px;
-}
-
-#portfolio-item9 {
-  background-image: url("assets/portfolio/project9.png");
-  background-position: -16px -2px;
-}
-
-#portfolio-item10 {
-  background-image: url("assets/portfolio/project10.png");
-  background-position: -141px -113px;
-}
-
-#portfolio-item11 {
-  background-image: url("assets/portfolio/project11.png");
-  background-position: -144px -175px;
-}
-
-#portfolio-item12 {
-  background-image: url("assets/portfolio/project12.png");
-  background-position: -36px -60px;
 }
 
 .about_us {
@@ -866,7 +810,8 @@ html {
   .header-nav {
     position: fixed;
     height: 100%;
-    width: 278px;
+    width: 74.13vw;
+    min-width: 278px;
     z-index: 1;
     top: 0;
     left: 0;
@@ -911,6 +856,11 @@ html {
     transform: scale(0.37);
   }
 
+  .slide-2-img {
+    top: 17vw;
+    left: -10%;
+  }
+
   .iphone-vertical {
     top: 55px;
     left: -60vw;
@@ -930,6 +880,12 @@ html {
     margin-top: 25px;
     grid-template-columns: 80vw;
     gap: 15px 0;
+  }
+
+  .services-item {
+    grid-template-columns: minmax(60px, 60px) min(219px, 58.4vw);
+    grid-template-rows: auto minmax(64px, 64px);
+    gap: 10px min(20px, 5.33vw);
   }
 
   .portfolio {
