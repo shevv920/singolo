@@ -17,10 +17,10 @@ window.addEventListener("load", () => {
   function setUniqueInSiblings(target, cls) {
     if(containsClass(target, cls))
       return false;
-    const siblings = [...document.getElementsByClassName(cls)];
+    const siblings = document.querySelectorAll(`.${cls}`);
     siblings.forEach(sib => sib.classList.remove(cls));
     target.classList.add(cls);
-    return true; 
+    return true;
   }
 
   function portfolioShuffle() {
