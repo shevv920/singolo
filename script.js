@@ -104,10 +104,10 @@ window.addEventListener("load", () => {
   function toggleBurgerMenu() {
     const menuIcon = document.querySelector(".header-nav-menu-button");
     const menu     = document.querySelector(".header-nav");
-    const cover    = document.querySelector(".cover");
+    const overlay  = document.querySelector(".overlay");
     menu.classList.toggle("hidden");
     menuIcon.classList.toggle("rotated");
-    cover.classList.toggle("hidden");
+    overlay.classList.toggle("hidden");
   }
 
   function formSubmitHandler(event) {

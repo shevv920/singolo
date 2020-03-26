@@ -807,13 +807,13 @@ html {
     padding: 71px 0 0 0;
   }
 
-  .cover {
+  .overlay {
     position: fixed;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
     z-index: 1;
-    background-color: #000000;
+    background: #2d303a;
+    opacity: 0.6;
   }
 
   .header-nav {
