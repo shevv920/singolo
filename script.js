@@ -105,9 +105,11 @@ window.addEventListener("load", () => {
     const menuIcon = document.querySelector(".header-nav-menu-button");
     const menu     = document.querySelector(".header-nav");
     const overlay  = document.querySelector(".overlay");
+    const logo     = document.querySelector(".header-logo");
     menu.classList.toggle("hidden");
     menuIcon.classList.toggle("rotated");
     overlay.classList.toggle("hidden");
+    logo.classList.toggle("moved-left");
   }
 
   function formSubmitHandler(event) {
