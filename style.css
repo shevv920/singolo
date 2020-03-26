@@ -96,10 +96,11 @@ html {
 }
 
 .header-nav-list-item::after {
-  margin-left: 8px;
-  margin-right: 8px;
-  color: #494e62;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #ffffff;
   content: "·";
+  font-size: 15px;
 }
 
 .header-nav-list-item:last-child::after {
@@ -696,42 +697,45 @@ html {
   }
 
   .slider {
-    padding: 0 27px;
+    padding: 0 15px 0 27px;
     grid-template-columns: 2% auto 2%;
   }
 
   .slider-screen {
-    min-height: 440px;
+    min-height: 445px;
   }
 
   .slider-screen > * {
-    transform: scale(0.8);
+    transform: scale(0.75);
   }
 
   .iphone-vertical {
-    top: 34px;
+    top: 53px;
     left: -56px;
   }
 
   .iphone-horizontal {
-    right: -50px;
-    top: 145px;
+    right: -34px;
+    top: 176px;
   }
 
   .services {
-    padding: 40px 41px 64px 39px;
+    padding: 44px 41px 74px 39px;
   }
 
   .services-items {
+    margin-top: 40px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(94px, 94px) minmax(94px, 94px) minmax(94px, 94px);
+    gap: 45px 39px;
   }
 
   .portfolio {
-    padding: 59px 32px 73px 41px;
+    padding: 62px 32px 73px 41px;
   }
 
   .portfolio-illustration {
+    margin-top: 32px;
     grid-template-columns: 216px 216px 216px;
     grid-template-rows: 183px 183px 183px 183px;
   }
@@ -740,7 +744,12 @@ html {
     width: 100%;
   }
 
+  .about_us {
+    padding: 54px 41px 69px 40px;
+  }
+
   .about_us-persons {
+    margin-top: 37px;
     grid-template-columns: minmax(28.52vw, 28.52vw) minmax(28.52vw, 28.52vw) minmax(28.52vw, 28.52vw);
     gap: 0 1.96vw;
   }
@@ -751,23 +760,24 @@ html {
   }
 
   .person-name {
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   .person-description {
-    margin-top: 5px;
+    margin-top: 2px;
   }
 
   .social_buttons {
-    margin-top: 9px;
+    margin-top: 13px;
   }
 
   .get_a_quote {
-    padding: 53px 40px 40px 40px;
+    padding: 58px 40px 40px 40px;
   }
 
   .get_a_quote-container {
-    padding-top: 15px;
+    margin-top: 12px;
+    padding: 0;
     gap: 30px;
   }
 
@@ -780,6 +790,10 @@ html {
     width: 57.55vw;
   }
 
+  .get_a_quote-form-textarea {
+    height: 158px;
+  }
+
   .get_a_quote-submit_button {
     margin-top: 7px;
   }
@@ -790,6 +804,10 @@ html {
 
   .contact_info-links {
     margin: 12px 0 0 0;
+  }
+
+  .footer {
+    padding: 20px 25px 30px 40px;
   }
 }
 
@@ -814,6 +832,11 @@ html {
     z-index: 1;
     background: #2d303a;
     opacity: 0.6;
+  }
+
+  .header-logo {
+    font-size: 20px;
+    margin-left: 28px;
   }
 
   .header-nav {
@@ -858,11 +881,11 @@ html {
   }
 
   .slider-screen {
-    min-height: 220px;
+    min-height: 215px;
   }
 
   .slider-screen > * {
-    transform: scale(0.37);
+    transform: scale(0.365);
   }
 
   .slide-2-img {
@@ -881,14 +904,14 @@ html {
   }
 
   .services {
-    padding: 6.67vw 7.73vw 4vw 8.53vw;
+    padding: 7.67vw 7.73vw 4vw 8vw;
     scroll-margin-top: 71px;
   }
 
   .services-items {
-    margin-top: 25px;
+    margin-top: 29px;
     grid-template-columns: 80vw;
-    gap: 15px 0;
+    gap: 25px 0;
   }
 
   .services-item {
