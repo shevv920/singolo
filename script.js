@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
   document.addEventListener("scroll", scrollHandler);
   document.querySelector(".iphone-vertical").addEventListener('click', event => toggleVertical(event));
   document.querySelector(".iphone-horizontal").addEventListener('click', event => toggleHorizontal(event));
-
+  document.querySelector(".header-nav-menu-button").addEventListener('click', event => toggleBurgerMenu());
   const containsClass = (elem, cls) => elem.classList.contains(cls);
  
   scrollHandler(); //check if sticky header has to be enabled
@@ -97,9 +97,7 @@ window.addEventListener("load", () => {
       if(sliderEnabled) previousSlide();
     } else if (containsClass(target, "arrow-right")) {
       if(sliderEnabled) nextSlide();
-    } else if (containsClass(target, "header-nav-menu-button")) {
-      toggleBurgerMenu();
-    }
+    } 
   }
 
   function toggleBurgerMenu() {
