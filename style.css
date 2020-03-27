@@ -218,7 +218,7 @@ html {
 .iphone-vertical {
   position: absolute;
   top: min(2.06vw, 21px);
-  left: 3.92vw;
+  left: min(3.92vw, 40px);
   cursor: pointer;
 }
 
@@ -239,7 +239,7 @@ html {
 
 .iphone-horizontal {
   position: absolute;
-  right: 6.37vw;
+  right: min(6.37vw, 65px);
   top: 142px;
   transform: rotate(90deg);
   cursor: pointer;
