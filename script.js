@@ -1,3 +1,4 @@
+"use strict";
 window.addEventListener("load", () => {
   document.addEventListener("click", ev => mainHandler(ev));
   document.addEventListener("submit", ev => formSubmitHandler(ev));
