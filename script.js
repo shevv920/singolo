@@ -85,6 +85,9 @@ window.addEventListener("load", () => {
 
     if(containsClass(target, "header-nav-link")) {
       event.preventDefault();
+      if(window.screen.width < 768) {
+        toggleBurgerMenu();
+      }
       const scrollTarget = document.querySelector(event.target.getAttribute("href"));
       scrollTarget.scrollIntoView({behavior: "smooth"});
     } else if(containsClass(target, "portfolio-nav-button")) {

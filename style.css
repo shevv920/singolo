@@ -239,7 +239,7 @@ html {
 
 .iphone-horizontal {
   position: absolute;
-  right: min(6.37vw, 65px);
+  right: 65px;
   top: 142px;
   transform: rotate(90deg);
   cursor: pointer;
@@ -912,7 +912,7 @@ html {
   }
 
   .services {
-    padding: 7.67vw 7.73vw 4vw 8vw;
+    padding: 7.67vw 7.73vw 6.4vw 8vw;
     scroll-margin-top: 71px;
   }
 
@@ -929,8 +929,12 @@ html {
   }
 
   .portfolio {
-    padding: 42px 30px;
+    padding: 45px 30px 40px;
     scroll-margin-top: 71px;
+  }
+
+  .portfolio-nav {
+    margin-top: 20px;
   }
 
   .portfolio-illustration {
@@ -946,14 +950,19 @@ html {
   }
 
   .about_us {
-    padding: 8.8vw 8vw;
+    padding: 8.8vw 8vw 10.5vw;
     scroll-margin-top: 71px;
   }
 
   .about_us-persons {
-    margin: 14px 0 0 0;
+    margin: 24px 0 0 0;
     grid-template-columns: 83.73vw;
     grid-template-rows: minmax(440px, 117.33vw) minmax(440px, 117.33vw) minmax(440px, 117.33vw);
+    gap: 35px 0;
+  }
+
+  .person-name {
+    margin-top: 15px;
   }
 
   .person-photo {
@@ -964,7 +973,7 @@ html {
   }
 
   .get_a_quote {
-    padding: 8.8vw 8vw;
+    padding: 12.8vw 8vw 10vw;
     scroll-margin-top: 71px;
   }
 
@@ -981,6 +990,14 @@ html {
   .get_a_quote-submit_button {
     width: 100%;
     text-align: center;
+  }
+
+  .contact_info {
+    margin-top: 19px;
+  }
+
+  .contact_info-links {
+    margin-top: 17px;
   }
 
   .footer {
