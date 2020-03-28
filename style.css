@@ -842,7 +842,6 @@ html {
   .header-logo {
     position: fixed;
     font-size: 20px;
-    margin-left: 28px;
     z-index: 2;
     transition: 0.3s ease-in-out;
   }
@@ -942,7 +941,7 @@ html {
     margin: 25px 0 0 0;
     grid-template-columns: 40.27vw 40.27vw;
     grid-template-rows: 34.13vw 34.13vw 34.13vw 34.13vw;
-    gap: 14px 13px;
+    gap: 14px 14px;
   }
 
   .portfolio-illustration:nth-child(n+8) {
