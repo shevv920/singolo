@@ -371,6 +371,7 @@ html {
   grid-template-columns: 220px 220px 220px 220px;
   grid-template-rows: 187px 187px 187px;
   gap: 20px 20px;
+  overflow: hidden;
 }
 
 .portfolio-illustration > img {
@@ -928,7 +929,7 @@ html {
   }
 
   .portfolio {
-    padding: 45px 30px 40px;
+    padding: 12vw 8vw 10.67vw;
     scroll-margin-top: 71px;
   }
 
@@ -942,6 +943,12 @@ html {
     grid-template-columns: 40.27vw 40.27vw;
     grid-template-rows: 34.13vw 34.13vw 34.13vw 34.13vw;
     gap: 14px 14px;
+    overflow: hidden;
+  }
+
+  .portfolio-illustration-item {
+    width: 40.27vw;
+    height: 34.14vw;
   }
 
   .portfolio-illustration:nth-child(n+8) {
