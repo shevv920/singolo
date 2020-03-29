@@ -123,8 +123,8 @@ window.addEventListener("load", () => {
     const resSubject = document.querySelector("#form_submit-res-subject");
     const resDescr   = document.querySelector("#form_submit-res-description");
 
-    resSubject.textContent = subject !== "" ? `Subject: ${subject}` : "Without subject";
-    resDescr.textContent   = descr !== "" ? `Description: ${descr}` : "Without description";
+    resSubject.textContent = subject !== "" ? `Subject: ${subject}` : "No subject";
+    resDescr.textContent   = descr !== "" ? `Description: ${descr}` : "No description";
 
     const windowContainer = document.querySelector("#form_submit_res-container");
     windowContainer.classList.toggle("hidden");
