@@ -85,7 +85,7 @@ window.addEventListener("load", () => {
 
     if(containsClass(target, "header-nav-link")) {
       event.preventDefault();
-      if(window.screen.width < 768) {
+      if(window.innerWidth < 768) {
         toggleBurgerMenu();
       }
       const scrollTarget = document.querySelector(event.target.getAttribute("href"));
